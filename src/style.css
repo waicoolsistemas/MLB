@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html, body {
+    @apply bg-navy-950 text-white font-sans;
+    min-height: 100vh;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #app {
+    min-height: 100vh;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-cardinal-600 hover:bg-cardinal-500 active:bg-cardinal-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cardinal-400 focus:ring-offset-2 focus:ring-offset-navy-800 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-gold-400 hover:bg-gold-400 hover:text-navy-950 text-gold-400 font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-navy-800 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-navy-700 text-gray-300 hover:text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 focus:outline-none;
+  }
+
+  .input-field {
+    @apply w-full bg-navy-700 border border-navy-600 hover:border-navy-500 focus:border-cardinal-600 text-white placeholder-gray-500 px-4 py-3 rounded-lg outline-none transition-all duration-200 text-sm;
+  }
+
+  .card {
+    @apply bg-navy-800 border border-navy-600 rounded-xl;
+  }
+}
